@@ -4,3 +4,6 @@
 
 export * from "./schemas/signin";
 
+// Package version
+export const PACKAGE_VERSION = '1.0.0';
+

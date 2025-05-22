@@ -1,23 +1,36 @@
 {
-  "name": "@commit-tech/schemas",
+  "name": "@committech/package-schemas",
   "version": "1.0.0",
+  "description": "Shared schemas and types for CommitTech packages",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "src/**/*",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "gen:barrels": "barrelsby --directory src --delete --exclude '\\\\.spec\\\\.ts$'"
+    "prepublishOnly": "npm run build",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
   },
-  "dependencies": {
-    "zod": "3.24.4"
-  },
+  "keywords": [
+    "schemas",
+    "types",
+    "typescript",
+    "committech"
+  ],
+  "author": "CommitTech",
+  "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^29.5.0",
-    "barrelsby": "^2.8.1",
-    "jest": "^29.5.0",
-    "ts-jest": "^29.1.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CommitTech-Solucoes/package-schemas.git"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
