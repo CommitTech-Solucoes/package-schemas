@@ -23,7 +23,7 @@
   ],
   "author": "CommitTech",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "typescript": "^5.0.0"
   },
   "repository": {
